@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Namz Bracelet Shop</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      color: #5a1a2e;
+    }
+    header {
+      background: #ff4d6d;
+      padding: 20px;
+      text-align: center;
+      color: white;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+    header p {
+      margin-top: 8px;
+      font-size: 1.1rem;
+    }
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+    }
+    .card {
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+      overflow: hidden;
+      transition: transform 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-8px);
+    }
+    .card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+    .card-content {
+      padding: 20px;
+      text-align: center;
+    }
+    .card-content h3 {
+      margin: 10px 0;
+    }
+    .price {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #ff4d6d;
+    }
+    button {
+      margin-top: 15px;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 25px;
+      background: #ff4d6d;
+      color: white;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    button:hover {
+      background: #e63956;
+    }
+    footer {
+      background: #5a1a2e;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>❤ Namz Bracelet Shop ❤</h1>
+    <p>Perfect bracelets to gift your loved one</p>
+  </header>
+
+  <div class="container">
+    <div class="products">
+
+      <div class="card">
+        <img src="https://i.ibb.co/YK1hT7N/lv-0-20260208102022.png" alt="Heart Bracelet">
+        <div class="card-content">
+          <h3> Send Anonymous Message to Someone</h3>
+          <p class="price">20₱ - 45₱ 5̶0̶₱̶</p>
+          <button onclick="buy('Heart Charm Bracelet')">Buy</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://i.ibb.co/fzL4SxJR/30aca161-36ba-4ee3-8b88-a3638b35a243.png" alt="Couple Bracelet">
+        <div class="card-content">
+          <h3>Bracelet Gift Bundle</h3>
+          <p class="price">80₱ 1̶0̶0̶₱̶</p>
+          <button onclick="buy('Couple Love Bracelet')">Buy Now</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://i.ibb.co/Ng71SSjz/53dc175d-9eca-4f88-8ae2-4e617dbdfeba.png" alt="Rose Bracelet">
+        <div class="card-content">
+          <h3>Custom Bracelet</h3>
+          <p class="price">15₱ 2̶5̶₱̶</p>
+          <button onclick="buy('Rose Gold Bracelet')">Buy Now</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2026 Valentine Bracelet Shop | Made with ❤</p>
+  </footer>
+
+  <style>
+  .contact-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  .contact-box {
+    background: #fff;
+    border-radius: 16px;
+    padding: 30px;
+    max-width: 380px;
+    width: 90%;
+    text-align: center;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+  }
+  .contact-box h2 {
+    color: #ff4d6d;
+    margin-top: 0;
+  }
+  .contact-box p {
+    margin: 10px 0;
+    font-size: 1rem;
+  }
+  .close-btn {
+    margin-top: 20px;
+    padding: 10px 22px;
+    border: none;
+    border-radius: 20px;
+    background: #ff4d6d;
+    color: #fff;
+    cursor: pointer;
+  }
+</style>
+
+<div class="contact-modal" id="contactModal">
+  <div class="contact-box">
+    <h2>❤ Please Contact Me ❤</h2>
+    <p><strong>No:</strong> 09562776185</p>
+    <p><strong>Facebook:</strong> Tristan Fua</p>
+    <p><strong>Location:</strong> Sta Rita Samar SRNHS</p>
+    <button class="close-btn" onclick="closeModal()">Close</button>
+  </div>
+</div>
+
+<script>
+  function buy(product) {
+    document.getElementById('contactModal').style.display = 'flex';
+  }
+  function closeModal() {
+    document.getElementById('contactModal').style.display = 'none';
+  }
+</script>
+
+</body>
+</html>
